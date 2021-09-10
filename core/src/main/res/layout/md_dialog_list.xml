@@ -1,14 +1,13 @@
-<com.afollestad.materialdialogs.internal.MDRootLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:orientation="vertical">
+<com.rename.materialdialogs.internal.MDRootLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-  <include layout="@layout/md_stub_titleframe_lesspadding"/>
+  <include layout="@layout/md_stub_titleframe_lesspadding" />
 
   <LinearLayout
-    android:layout_width="match_parent"
+      android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -36,20 +35,20 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
 
-      <android.support.v7.widget.RecyclerView
-        android:id="@+id/md_contentRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:paddingBottom="@dimen/md_content_padding_bottom"
-        android:paddingTop="@dimen/md_content_padding_top"
-        android:scrollbarStyle="outsideOverlay"
-        android:scrollbars="vertical"/>
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/md_contentRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:clipToPadding="false"
+          android:paddingBottom="@dimen/md_content_padding_bottom"
+          android:paddingTop="@dimen/md_content_padding_top"
+          android:scrollbarStyle="outsideOverlay"
+          android:scrollbars="vertical" />
 
     </FrameLayout>
 
   </LinearLayout>
 
-  <include layout="@layout/md_stub_actionbuttons"/>
+  <include layout="@layout/md_stub_actionbuttons" />
 
-</com.afollestad.materialdialogs.internal.MDRootLayout>
+</com.rename.materialdialogs.internal.MDRootLayout>

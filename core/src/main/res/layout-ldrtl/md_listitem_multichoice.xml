@@ -26,14 +26,14 @@
     tools:ignore="RtlSymmetry"
     tools:text="Item"/>
 
-  <android.support.v7.widget.AppCompatCheckBox
-    android:id="@+id/md_control"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:background="@null"
-    android:clickable="false"
-    android:focusable="false"
-    android:gravity="center_vertical"
-    android:minHeight="@dimen/md_listitem_height"/>
+  <androidx.appcompat.widget.AppCompatCheckBox
+      android:id="@+id/md_control"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:background="@null"
+      android:clickable="false"
+      android:focusable="false"
+      android:gravity="center_vertical"
+      android:minHeight="@dimen/md_listitem_height" />
 
 </LinearLayout>

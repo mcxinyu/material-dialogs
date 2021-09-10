@@ -75,7 +75,7 @@ You can download the latest sample APK from this repo here: https://github.com/a
 
 It's also on Google Play:
 
-<a href="https://play.google.com/store/apps/details?id=com.afollestad.materialdialogssample" target="_blank">
+<a href="https://play.google.com/store/apps/details?id=com.rename.materialdialogssample" target="_blank">
   <img alt="Get it on Google Play"
        src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60"/>
 </a>
@@ -102,7 +102,7 @@ You can create basic, list, single/multi choice, progress, input, etc. dialogs w
 ```gradle
 dependencies {
 	// ... other dependencies here
-    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
+    compile 'com.rename.material-dialogs:core:0.9.6.0'
 }
 ```
 
@@ -114,7 +114,7 @@ The *commons* module contains extensions to the library that not everyone may ne
 ```gradle
 dependencies {
     // ... other dependencies here
-    compile 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    compile 'com.rename.material-dialogs:commons:0.9.6.0'
 }
 ```
 

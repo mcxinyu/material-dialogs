@@ -3,8 +3,15 @@ package com.rename.materialdialogs;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.Outline;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewOutlineProvider;
+import android.view.Window;
 
 import androidx.annotation.NonNull;
 
@@ -38,6 +45,20 @@ class DialogBase extends Dialog implements DialogInterface.OnShowListener {
 
     final void setViewInternal(View view) {
         super.setContentView(view);
+        Window window = getWindow();
+        if (window != null) {
+            view.setBackgroundColor(getContext().getResources().getColor(R.color.white));
+            view.setOutlineProvider(new ViewOutlineProvider() {
+                @Override
+                public void getOutline(View view, Outline outline) {
+                    outline.setRoundRect(0, 0, view.getWidth(), view.getHeight(),
+                            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getContext().getResources().getDisplayMetrics()));
+                }
+            });
+            view.setClipToOutline(true);
+
+            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        }
     }
 
     @Override

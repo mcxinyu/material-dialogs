@@ -35,8 +35,8 @@ public class MDButton extends TextView {
 
   private void init(Context context) {
     stackedEndPadding =
-        context.getResources().getDimensionPixelSize(R.dimen.md_dialog_frame_margin);
-    stackedGravity = GravityEnum.END;
+            context.getResources().getDimensionPixelSize(R.dimen.rename_md_dialog_frame_margin);
+      stackedGravity = GravityEnum.END;
   }
 
   /**

@@ -349,7 +349,7 @@ public class ColorChooserDialog extends DialogFragment
             }
         }
 
-        circleSize = getResources().getDimensionPixelSize(R.dimen.md_colorchooser_circlesize);
+        circleSize = getResources().getDimensionPixelSize(R.dimen.rename_md_colorchooser_circlesize);
         final Builder builder = getBuilder();
 
         MaterialDialog.Builder bd =
@@ -640,15 +640,15 @@ public class ColorChooserDialog extends DialogFragment
         @ColorInt
         int preselectColor;
         @StringRes
-        int doneBtn = R.string.md_done_label;
+        int doneBtn = R.string.rename_md_done_label;
         @StringRes
-        int backBtn = R.string.md_back_label;
+        int backBtn = R.string.rename_md_back_label;
         @StringRes
-        int cancelBtn = R.string.md_cancel_label;
+        int cancelBtn = R.string.rename_md_cancel_label;
         @StringRes
-        int customBtn = R.string.md_custom_label;
+        int customBtn = R.string.rename_md_custom_label;
         @StringRes
-        int presetsBtn = R.string.md_presets_label;
+        int presetsBtn = R.string.rename_md_presets_label;
         @Nullable
         int[] colorsTop;
         @Nullable

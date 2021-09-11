@@ -279,11 +279,11 @@ public class MaterialDialog extends DialogBase
       return ResourcesCompat.getDrawable(
           builder.context.getResources(), builder.listSelector, null);
     }
-    final Drawable d = DialogUtils.resolveDrawable(builder.context, R.attr.md_list_selector);
+    final Drawable d = DialogUtils.resolveDrawable(builder.context, R.attr.rename_md_list_selector);
     if (d != null) {
       return d;
     }
-    return DialogUtils.resolveDrawable(getContext(), R.attr.md_list_selector);
+      return DialogUtils.resolveDrawable(getContext(), R.attr.rename_md_list_selector);
   }
 
   public RecyclerView getRecyclerView() {
@@ -307,12 +307,12 @@ public class MaterialDialog extends DialogBase
         return ResourcesCompat.getDrawable(
             builder.context.getResources(), builder.btnSelectorStacked, null);
       }
-      final Drawable d =
-          DialogUtils.resolveDrawable(builder.context, R.attr.md_btn_stacked_selector);
+        final Drawable d =
+                DialogUtils.resolveDrawable(builder.context, R.attr.rename_md_btn_stacked_selector);
       if (d != null) {
         return d;
       }
-      return DialogUtils.resolveDrawable(getContext(), R.attr.md_btn_stacked_selector);
+        return DialogUtils.resolveDrawable(getContext(), R.attr.rename_md_btn_stacked_selector);
     } else {
       switch (which) {
         default:
@@ -321,12 +321,12 @@ public class MaterialDialog extends DialogBase
               return ResourcesCompat.getDrawable(
                   builder.context.getResources(), builder.btnSelectorPositive, null);
             }
-            Drawable d =
-                DialogUtils.resolveDrawable(builder.context, R.attr.md_btn_positive_selector);
+              Drawable d =
+                      DialogUtils.resolveDrawable(builder.context, R.attr.rename_md_btn_positive_selector);
             if (d != null) {
               return d;
             }
-            d = DialogUtils.resolveDrawable(getContext(), R.attr.md_btn_positive_selector);
+              d = DialogUtils.resolveDrawable(getContext(), R.attr.rename_md_btn_positive_selector);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
               RippleHelper.applyColor(d, builder.buttonRippleColor);
             }
@@ -338,12 +338,12 @@ public class MaterialDialog extends DialogBase
               return ResourcesCompat.getDrawable(
                   builder.context.getResources(), builder.btnSelectorNeutral, null);
             }
-            Drawable d =
-                DialogUtils.resolveDrawable(builder.context, R.attr.md_btn_neutral_selector);
+              Drawable d =
+                      DialogUtils.resolveDrawable(builder.context, R.attr.rename_md_btn_neutral_selector);
             if (d != null) {
               return d;
             }
-            d = DialogUtils.resolveDrawable(getContext(), R.attr.md_btn_neutral_selector);
+              d = DialogUtils.resolveDrawable(getContext(), R.attr.rename_md_btn_neutral_selector);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
               RippleHelper.applyColor(d, builder.buttonRippleColor);
             }
@@ -355,12 +355,12 @@ public class MaterialDialog extends DialogBase
               return ResourcesCompat.getDrawable(
                   builder.context.getResources(), builder.btnSelectorNegative, null);
             }
-            Drawable d =
-                DialogUtils.resolveDrawable(builder.context, R.attr.md_btn_negative_selector);
+              Drawable d =
+                      DialogUtils.resolveDrawable(builder.context, R.attr.rename_md_btn_negative_selector);
             if (d != null) {
               return d;
             }
-            d = DialogUtils.resolveDrawable(getContext(), R.attr.md_btn_negative_selector);
+              d = DialogUtils.resolveDrawable(getContext(), R.attr.rename_md_btn_negative_selector);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
               RippleHelper.applyColor(d, builder.buttonRippleColor);
             }
@@ -1180,7 +1180,7 @@ public class MaterialDialog extends DialogBase
 
     public Builder(@NonNull Context context) {
       this.context = context;
-      final int materialBlue = DialogUtils.getColor(context, R.color.md_material_blue_600);
+        final int materialBlue = DialogUtils.getColor(context, R.color.rename_md_material_blue_600);
 
       // Retrieve default accent colors, which are used on the action buttons and progress bars
       this.widgetColor = DialogUtils.resolveColor(context, R.attr.colorAccent, materialBlue);
@@ -1191,10 +1191,10 @@ public class MaterialDialog extends DialogBase
 
       this.positiveColor = DialogUtils.getActionTextStateList(context, this.widgetColor);
       this.negativeColor = DialogUtils.getActionTextStateList(context, this.widgetColor);
-      this.neutralColor = DialogUtils.getActionTextStateList(context, this.widgetColor);
-      this.linkColor =
-          DialogUtils.getActionTextStateList(
-              context, DialogUtils.resolveColor(context, R.attr.md_link_color, this.widgetColor));
+        this.neutralColor = DialogUtils.getActionTextStateList(context, this.widgetColor);
+        this.linkColor =
+                DialogUtils.getActionTextStateList(
+                        context, DialogUtils.resolveColor(context, R.attr.rename_md_link_color, this.widgetColor));
 
       int fallback = 0;
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -1202,9 +1202,9 @@ public class MaterialDialog extends DialogBase
       }
       this.buttonRippleColor =
           DialogUtils.resolveColor(
-              context,
-              R.attr.md_btn_ripple_color,
-              DialogUtils.resolveColor(context, R.attr.colorControlHighlight, fallback));
+                  context,
+                  R.attr.rename_md_btn_ripple_color,
+                  DialogUtils.resolveColor(context, R.attr.colorControlHighlight, fallback));
 
       this.progressPercentFormat = NumberFormat.getPercentInstance();
       this.progressNumberFormat = "%1d/%2d";
@@ -1218,30 +1218,30 @@ public class MaterialDialog extends DialogBase
       checkSingleton();
 
       // Retrieve gravity settings from global theme attributes if needed
-      this.titleGravity =
-          DialogUtils.resolveGravityEnum(context, R.attr.md_title_gravity, this.titleGravity);
-      this.contentGravity =
-          DialogUtils.resolveGravityEnum(context, R.attr.md_content_gravity, this.contentGravity);
-      this.btnStackedGravity =
-          DialogUtils.resolveGravityEnum(
-              context, R.attr.md_btnstacked_gravity, this.btnStackedGravity);
-      this.itemsGravity =
-          DialogUtils.resolveGravityEnum(context, R.attr.md_items_gravity, this.itemsGravity);
-      this.buttonsGravity =
-          DialogUtils.resolveGravityEnum(context, R.attr.md_buttons_gravity, this.buttonsGravity);
+        this.titleGravity =
+                DialogUtils.resolveGravityEnum(context, R.attr.rename_md_title_gravity, this.titleGravity);
+        this.contentGravity =
+                DialogUtils.resolveGravityEnum(context, R.attr.rename_md_content_gravity, this.contentGravity);
+        this.btnStackedGravity =
+                DialogUtils.resolveGravityEnum(
+                        context, R.attr.rename_md_btnstacked_gravity, this.btnStackedGravity);
+        this.itemsGravity =
+                DialogUtils.resolveGravityEnum(context, R.attr.rename_md_items_gravity, this.itemsGravity);
+        this.buttonsGravity =
+                DialogUtils.resolveGravityEnum(context, R.attr.rename_md_buttons_gravity, this.buttonsGravity);
 
-      final String mediumFont = DialogUtils.resolveString(context, R.attr.md_medium_font);
-      final String regularFont = DialogUtils.resolveString(context, R.attr.md_regular_font);
-      try {
-        typeface(mediumFont, regularFont);
-      } catch (Throwable ignored) {
-      }
-
-      if (this.mediumFont == null) {
+        final String mediumFont = DialogUtils.resolveString(context, R.attr.rename_md_medium_font);
+        final String regularFont = DialogUtils.resolveString(context, R.attr.rename_md_regular_font);
         try {
-          if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            this.mediumFont = Typeface.create("sans-serif-medium", Typeface.NORMAL);
-          } else {
+            typeface(mediumFont, regularFont);
+        } catch (Throwable ignored) {
+        }
+
+        if (this.mediumFont == null) {
+            try {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    this.mediumFont = Typeface.create("sans-serif-medium", Typeface.NORMAL);
+                } else {
             this.mediumFont = Typeface.create("sans-serif", Typeface.BOLD);
           }
         } catch (Throwable ignored) {
@@ -2149,7 +2149,7 @@ public class MaterialDialog extends DialogBase
       this.inputMinLength = minLength;
       this.inputMaxLength = maxLength;
       if (errorColor == 0) {
-        this.inputRangeErrorColor = DialogUtils.getColor(context, R.color.md_edittext_error);
+          this.inputRangeErrorColor = DialogUtils.getColor(context, R.color.rename_md_edittext_error);
       } else {
         this.inputRangeErrorColor = errorColor;
       }

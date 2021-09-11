@@ -4,19 +4,19 @@
 
   <com.rename.materialdialogs.internal.MDButton
       android:id="@+id/md_buttonDefaultNeutral"
-      style="@style/MD_ActionButton.Text"
+      style="@style/rename_MD_ActionButton.Text"
       tools:text="Neutral" />
 
     <com.rename.materialdialogs.internal.MDButton
         android:id="@+id/md_buttonDefaultNegative"
-        style="@style/MD_ActionButton.Text"
+        style="@style/rename_MD_ActionButton.Text"
         tools:layout_alignParentLeft="true"
         tools:layout_alignParentStart="true"
         tools:text="Negative" />
 
     <com.rename.materialdialogs.internal.MDButton
         android:id="@+id/md_buttonDefaultPositive"
-        style="@style/MD_ActionButton.Text"
+        style="@style/rename_MD_ActionButton.Text"
         tools:layout_alignParentLeft="true"
         tools:layout_alignParentStart="true"
         tools:text="Positive" />

@@ -178,18 +178,18 @@ public class MDRootLayout extends ViewGroup {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MDRootLayout, defStyleAttr, 0);
         reducePaddingNoTitleNoButtons =
-                a.getBoolean(R.styleable.MDRootLayout_md_reduce_padding_no_title_no_buttons, true);
+                a.getBoolean(R.styleable.MDRootLayout_rename_md_reduce_padding_no_title_no_buttons, true);
         a.recycle();
 
-        noTitlePaddingFull = r.getDimensionPixelSize(R.dimen.md_notitle_vertical_padding);
-        buttonPaddingFull = r.getDimensionPixelSize(R.dimen.md_button_frame_vertical_padding);
+        noTitlePaddingFull = r.getDimensionPixelSize(R.dimen.rename_md_notitle_vertical_padding);
+        buttonPaddingFull = r.getDimensionPixelSize(R.dimen.rename_md_button_frame_vertical_padding);
 
-        buttonHorizontalEdgeMargin = r.getDimensionPixelSize(R.dimen.md_button_padding_frame_side);
-        buttonBarHeight = r.getDimensionPixelSize(R.dimen.md_button_height);
+        buttonHorizontalEdgeMargin = r.getDimensionPixelSize(R.dimen.rename_md_button_padding_frame_side);
+        buttonBarHeight = r.getDimensionPixelSize(R.dimen.rename_md_button_height);
 
         dividerPaint = new Paint();
-        dividerWidth = r.getDimensionPixelSize(R.dimen.md_divider_height);
-        dividerPaint.setColor(DialogUtils.resolveColor(context, R.attr.md_divider_color));
+        dividerWidth = r.getDimensionPixelSize(R.dimen.rename_md_divider_height);
+        dividerPaint.setColor(DialogUtils.resolveColor(context, R.attr.rename_md_divider_color));
         setWillNotDraw(false);
     }
 
@@ -249,7 +249,7 @@ public class MDRootLayout extends ViewGroup {
             }
 
             int buttonBarPadding =
-                    getContext().getResources().getDimensionPixelSize(R.dimen.md_neutral_button_margin);
+                    getContext().getResources().getDimensionPixelSize(R.dimen.rename_md_neutral_button_margin);
             final int buttonFrameWidth = width - 2 * buttonBarPadding;
             stacked = buttonsWidth > buttonFrameWidth;
         }

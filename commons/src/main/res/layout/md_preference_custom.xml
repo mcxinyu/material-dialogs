@@ -16,16 +16,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="@dimen/md_preference_content_inset"
-        android:layout_marginLeft="@dimen/md_preference_content_inset"
+        android:layout_marginStart="@dimen/rename_md_preference_content_inset"
+        android:layout_marginLeft="@dimen/rename_md_preference_content_inset"
         tools:ignore="ContentDescription" />
 
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left|start|center_vertical"
-        android:layout_marginStart="@dimen/md_preference_content_inset"
-        android:layout_marginLeft="@dimen/md_preference_content_inset"
+        android:layout_marginStart="@dimen/rename_md_preference_content_inset"
+        android:layout_marginLeft="@dimen/rename_md_preference_content_inset"
         android:layout_marginTop="12dip"
         android:layout_marginEnd="6dip"
         android:layout_marginRight="6dip"

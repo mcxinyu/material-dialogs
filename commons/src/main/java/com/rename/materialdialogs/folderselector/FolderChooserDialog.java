@@ -88,8 +88,8 @@ public class FolderChooserDialog extends DialogFragment implements MaterialDialo
                 getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             return new MaterialDialog.Builder(getActivity())
-                    .title(R.string.md_error_label)
-                    .content(R.string.md_storage_perm_error)
+                    .title(R.string.rename_md_error_label)
+                    .content(R.string.rename_md_storage_perm_error)
                     .positiveText(android.R.string.ok)
                     .build();
         }
@@ -271,7 +271,7 @@ public class FolderChooserDialog extends DialogFragment implements MaterialDialo
 
         public Builder(@NonNull Context context) {
             this.context = context;
-            chooseButton = R.string.md_choose_label;
+            chooseButton = R.string.rename_md_choose_label;
             cancelButton = android.R.string.cancel;
             goUpLabel = "...";
             initialPath = Environment.getExternalStorageDirectory().getAbsolutePath();
@@ -306,7 +306,7 @@ public class FolderChooserDialog extends DialogFragment implements MaterialDialo
         public Builder allowNewFolder(boolean allow, @StringRes int buttonLabel) {
             allowNewFolder = allow;
             if (buttonLabel == 0) {
-                buttonLabel = R.string.new_folder;
+                buttonLabel = R.string.rename_new_folder;
             }
             newFolderButton = buttonLabel;
             return this;

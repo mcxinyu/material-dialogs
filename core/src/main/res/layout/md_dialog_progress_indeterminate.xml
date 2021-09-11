@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:md_reduce_padding_no_title_no_buttons="false">
+    app:rename_md_reduce_padding_no_title_no_buttons="false">
 
     <include layout="@layout/md_stub_titleframe" />
 

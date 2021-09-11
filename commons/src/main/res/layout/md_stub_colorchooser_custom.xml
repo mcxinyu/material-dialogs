@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/md_colorChooserCustomFrame"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:orientation="vertical"
-  android:paddingBottom="@dimen/md_title_frame_margin_bottom"
-  android:paddingTop="@dimen/md_title_frame_margin_bottom">
-
-  <View
-    android:id="@+id/md_colorIndicator"
-    android:layout_width="match_parent"
-    android:layout_height="120dp"
-    tools:background="@color/md_material_blue_600" />
-
-  <LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/md_colorChooserCustomFrame"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="@dimen/md_title_frame_margin_bottom"
-    android:gravity="center">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/rename_md_title_frame_margin_bottom"
+    android:paddingTop="@dimen/rename_md_title_frame_margin_bottom">
+
+    <View
+        android:id="@+id/md_colorIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        tools:background="@color/rename_md_material_blue_600" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/rename_md_title_frame_margin_bottom"
+        android:gravity="center">
 
     <TextView
       android:layout_width="wrap_content"
@@ -29,9 +29,9 @@
       android:digits="0123456789abcdefABCDEF"
       android:text="#"
       android:textColor="?android:textColorPrimary"
-      android:textColorHint="?android:textColorSecondary"
-      android:textSize="@dimen/md_title_textsize"
-      tools:ignore="HardcodedText,TextViewEdits" />
+        android:textColorHint="?android:textColorSecondary"
+        android:textSize="@dimen/rename_md_title_textsize"
+        tools:ignore="HardcodedText,TextViewEdits" />
 
     <EditText
       android:id="@+id/md_hexInput"
@@ -39,40 +39,40 @@
       android:layout_height="wrap_content"
       android:digits="0123456789abcdefABCDEF"
       android:focusable="true"
-      android:hint="FF0099CC"
-      android:textSize="@dimen/md_title_textsize"
-      tools:ignore="HardcodedText" />
+        android:hint="FF0099CC"
+        android:textSize="@dimen/rename_md_title_textsize"
+        tools:ignore="HardcodedText" />
 
   </LinearLayout>
 
-  <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/md_title_frame_margin_bottom"
-    android:paddingLeft="@dimen/md_dialog_frame_margin"
-    android:paddingRight="@dimen/md_dialog_frame_margin">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rename_md_title_frame_margin_bottom"
+        android:paddingLeft="@dimen/rename_md_dialog_frame_margin"
+        android:paddingRight="@dimen/rename_md_dialog_frame_margin">
 
-    <!-- Alpha -->
+        <!-- Alpha -->
 
-    <TextView
-      android:id="@+id/md_colorALabel"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/md_colorA"
-      android:layout_alignTop="@+id/md_colorA"
-      android:layout_marginEnd="4dp"
+        <TextView
+            android:id="@+id/md_colorALabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/md_colorA"
+            android:layout_alignTop="@+id/md_colorA"
+            android:layout_marginEnd="4dp"
       android:layout_marginRight="4dp"
       android:text="A"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/rename_md_content_textsize"
+            tools:ignore="HardcodedText" />
 
     <SeekBar
       android:id="@+id/md_colorA"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="@dimen/md_title_frame_margin_bottom"
-      android:layout_toEndOf="@+id/md_colorALabel"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rename_md_title_frame_margin_bottom"
+        android:layout_toEndOf="@+id/md_colorALabel"
       android:layout_toLeftOf="@+id/md_colorAValue"
       android:layout_toRightOf="@+id/md_colorALabel"
       android:layout_toStartOf="@+id/md_colorAValue"
@@ -92,9 +92,9 @@
       android:gravity="center"
       android:minWidth="24dp"
       android:text="0"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/rename_md_content_textsize"
+        tools:ignore="HardcodedText" />
 
     <!-- Red -->
 
@@ -107,17 +107,17 @@
       android:layout_marginEnd="4dp"
       android:layout_marginRight="4dp"
       android:text="R"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/rename_md_content_textsize"
+        tools:ignore="HardcodedText" />
 
     <SeekBar
       android:id="@+id/md_colorR"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/md_colorA"
-      android:layout_marginTop="@dimen/md_title_frame_margin_bottom"
-      android:layout_toEndOf="@+id/md_colorRLabel"
+        android:layout_below="@+id/md_colorA"
+        android:layout_marginTop="@dimen/rename_md_title_frame_margin_bottom"
+        android:layout_toEndOf="@+id/md_colorRLabel"
       android:layout_toLeftOf="@+id/md_colorRValue"
       android:layout_toRightOf="@+id/md_colorRLabel"
       android:layout_toStartOf="@+id/md_colorRValue"
@@ -137,9 +137,9 @@
       android:gravity="center"
       android:minWidth="24dp"
       android:text="0"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/rename_md_content_textsize"
+        tools:ignore="HardcodedText" />
 
     <!-- Green -->
 
@@ -152,17 +152,17 @@
       android:layout_marginEnd="4dp"
       android:layout_marginRight="4dp"
       android:text="G"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/rename_md_content_textsize"
+        tools:ignore="HardcodedText" />
 
     <SeekBar
       android:id="@+id/md_colorG"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/md_colorR"
-      android:layout_marginTop="@dimen/md_title_frame_margin_bottom"
-      android:layout_toEndOf="@+id/md_colorGLabel"
+        android:layout_below="@+id/md_colorR"
+        android:layout_marginTop="@dimen/rename_md_title_frame_margin_bottom"
+        android:layout_toEndOf="@+id/md_colorGLabel"
       android:layout_toLeftOf="@+id/md_colorGValue"
       android:layout_toRightOf="@+id/md_colorGLabel"
       android:layout_toStartOf="@+id/md_colorGValue"
@@ -182,9 +182,9 @@
       android:gravity="center"
       android:minWidth="24dp"
       android:text="0"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/rename_md_content_textsize"
+        tools:ignore="HardcodedText" />
 
     <!-- Blue -->
 
@@ -197,17 +197,17 @@
       android:layout_marginEnd="4dp"
       android:layout_marginRight="4dp"
       android:text="B"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/rename_md_content_textsize"
+        tools:ignore="HardcodedText" />
 
     <SeekBar
       android:id="@+id/md_colorB"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/md_colorG"
-      android:layout_marginTop="@dimen/md_title_frame_margin_bottom"
-      android:layout_toEndOf="@+id/md_colorBLabel"
+        android:layout_below="@+id/md_colorG"
+        android:layout_marginTop="@dimen/rename_md_title_frame_margin_bottom"
+        android:layout_toEndOf="@+id/md_colorBLabel"
       android:layout_toLeftOf="@+id/md_colorBValue"
       android:layout_toRightOf="@+id/md_colorBLabel"
       android:layout_toStartOf="@+id/md_colorBValue"
@@ -226,9 +226,9 @@
       android:gravity="center"
       android:minWidth="24dp"
       android:text="0"
-      android:textColor="?android:textColorPrimary"
-      android:textSize="@dimen/md_content_textsize"
-      tools:ignore="HardcodedText" />
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/rename_md_content_textsize"
+        tools:ignore="HardcodedText" />
 
   </RelativeLayout>
 

@@ -146,8 +146,8 @@ public class FileChooserDialog extends DialogFragment implements MaterialDialog.
                 getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             return new MaterialDialog.Builder(getActivity())
-                    .title(R.string.md_error_label)
-                    .content(R.string.md_storage_perm_error)
+                    .title(R.string.rename_md_error_label)
+                    .content(R.string.rename_md_storage_perm_error)
                     .positiveText(android.R.string.ok)
                     .build();
         }

@@ -70,7 +70,7 @@ public class MaterialEditTextPreference extends EditTextPreference {
       fallback = 0;
     }
     fallback = DialogUtils.resolveColor(context, R.attr.colorAccent, fallback);
-    color = DialogUtils.resolveColor(context, R.attr.md_widget_color, fallback);
+      color = DialogUtils.resolveColor(context, R.attr.rename_md_widget_color, fallback);
 
     editText = new AppCompatEditText(context, attrs);
     // Give it an ID so it can be saved/restored

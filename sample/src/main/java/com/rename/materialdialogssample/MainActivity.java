@@ -284,31 +284,31 @@ public class MainActivity extends AppCompatActivity
   @OnClick(R.id.singleChoice)
   public void showSingleChoice() {
     new MaterialDialog.Builder(this)
-        .title(R.string.socialNetworks)
-        .items(R.array.socialNetworks)
-        .itemsDisabledIndices(1, 3)
-        .itemsCallbackSingleChoice(
-            2,
-            (dialog, view, which, text) -> {
-              showToast(which + ": " + text);
-              return true; // allow selection
-            })
-        .positiveText(R.string.md_choose_label)
+            .title(R.string.socialNetworks)
+            .items(R.array.socialNetworks)
+            .itemsDisabledIndices(1, 3)
+            .itemsCallbackSingleChoice(
+                    2,
+                    (dialog, view, which, text) -> {
+                        showToast(which + ": " + text);
+                        return true; // allow selection
+                    })
+            .positiveText(R.string.rename_md_choose_label)
         .show();
   }
 
   @OnClick(R.id.singleChoice_longItems)
   public void showSingleChoiceLongItems() {
-    new MaterialDialog.Builder(this)
-        .title(R.string.socialNetworks)
-        .items(R.array.socialNetworks_longItems)
-        .itemsCallbackSingleChoice(
-            2,
-            (dialog, view, which, text) -> {
-              showToast(which + ": " + text);
-              return true; // allow selection
-            })
-        .positiveText(R.string.md_choose_label)
+      new MaterialDialog.Builder(this)
+              .title(R.string.socialNetworks)
+              .items(R.array.socialNetworks_longItems)
+              .itemsCallbackSingleChoice(
+                      2,
+                      (dialog, view, which, text) -> {
+                          showToast(which + ": " + text);
+                          return true; // allow selection
+                      })
+              .positiveText(R.string.rename_md_choose_label)
         .show();
   }
 
@@ -325,17 +325,17 @@ public class MainActivity extends AppCompatActivity
                 if (i > 0) {
                   str.append('\n');
                 }
-                str.append(which[i]);
-                str.append(": ");
-                str.append(text[i]);
+                  str.append(which[i]);
+                  str.append(": ");
+                  str.append(text[i]);
               }
-              showToast(str.toString());
-              return true; // allow selection
+                showToast(str.toString());
+                return true; // allow selection
             })
-        .onNeutral((dialog, which) -> dialog.clearSelectedIndices())
-        .onPositive((dialog, which) -> dialog.dismiss())
-        .alwaysCallMultiChoiceCallback()
-        .positiveText(R.string.md_choose_label)
+            .onNeutral((dialog, which) -> dialog.clearSelectedIndices())
+            .onPositive((dialog, which) -> dialog.dismiss())
+            .alwaysCallMultiChoiceCallback()
+            .positiveText(R.string.rename_md_choose_label)
         .autoDismiss(false)
         .neutralText(R.string.clear_selection)
         .show();
@@ -393,17 +393,17 @@ public class MainActivity extends AppCompatActivity
             (dialog, which, text) -> {
               StringBuilder str = new StringBuilder();
               for (int i = 0; i < which.length; i++) {
-                if (i > 0) {
-                  str.append('\n');
-                }
-                str.append(which[i]);
-                str.append(": ");
-                str.append(text[i]);
+                  if (i > 0) {
+                      str.append('\n');
+                  }
+                  str.append(which[i]);
+                  str.append(": ");
+                  str.append(text[i]);
               }
-              showToast(str.toString());
-              return true; // allow selection
+                showToast(str.toString());
+                return true; // allow selection
             })
-        .positiveText(R.string.md_choose_label)
+            .positiveText(R.string.rename_md_choose_label)
         .show();
   }
 
@@ -420,16 +420,16 @@ public class MainActivity extends AppCompatActivity
                 if (i > 0) {
                   str.append('\n');
                 }
-                str.append(which[i]);
-                str.append(": ");
-                str.append(text[i]);
+                  str.append(which[i]);
+                  str.append(": ");
+                  str.append(text[i]);
               }
-              showToast(str.toString());
-              return true; // allow selection
+                showToast(str.toString());
+                return true; // allow selection
             })
-        .onNeutral((dialog, which) -> dialog.clearSelectedIndices())
-        .alwaysCallMultiChoiceCallback()
-        .positiveText(R.string.md_choose_label)
+            .onNeutral((dialog, which) -> dialog.clearSelectedIndices())
+            .alwaysCallMultiChoiceCallback()
+            .positiveText(R.string.rename_md_choose_label)
         .autoDismiss(false)
         .neutralText(R.string.clear_selection)
         .itemsDisabledIndices(0, 1)
@@ -700,8 +700,8 @@ public class MainActivity extends AppCompatActivity
           STORAGE_PERMISSION_RC);
       return;
     }
-    new FolderChooserDialog.Builder(MainActivity.this)
-        .chooseButton(R.string.md_choose_label)
+      new FolderChooserDialog.Builder(MainActivity.this)
+              .chooseButton(R.string.rename_md_choose_label)
         .allowNewFolder(true, 0)
         .show(this);
   }
@@ -814,8 +814,8 @@ public class MainActivity extends AppCompatActivity
                     }
                     runOnUiThread(
                         () -> {
-                          thread = null;
-                          dialog.setContent(getString(R.string.md_done_label));
+                            thread = null;
+                            dialog.setContent(getString(R.string.rename_md_done_label));
                         });
                   });
             })

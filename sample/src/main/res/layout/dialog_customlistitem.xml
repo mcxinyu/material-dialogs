@@ -11,11 +11,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/md_listitem_margin_left"
-        android:layout_marginStart="@dimen/md_listitem_margin_left"
+        android:layout_marginLeft="@dimen/rename_md_listitem_margin_left"
+        android:layout_marginStart="@dimen/rename_md_listitem_margin_left"
         android:layout_toLeftOf="@+id/md_button"
         android:layout_toStartOf="@+id/md_button"
-        android:textSize="@dimen/md_listitem_textsize" />
+        android:textSize="@dimen/rename_md_listitem_textsize" />
 
     <Button
         android:id="@+id/md_button"
@@ -25,8 +25,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginBottom="4dp"
-        android:layout_marginEnd="@dimen/md_dialog_frame_margin"
-        android:layout_marginRight="@dimen/md_dialog_frame_margin"
+        android:layout_marginEnd="@dimen/rename_md_dialog_frame_margin"
+        android:layout_marginRight="@dimen/rename_md_dialog_frame_margin"
         android:layout_marginTop="4dp"
         android:text="@string/custom_listitem_button" />
 

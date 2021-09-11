@@ -46,10 +46,10 @@ class DialogInit {
   @StyleRes
   static int getTheme(@NonNull MaterialDialog.Builder builder) {
     boolean darkTheme =
-        DialogUtils.resolveBoolean(
-            builder.context, R.attr.md_dark_theme, builder.theme == Theme.DARK);
+            DialogUtils.resolveBoolean(
+                    builder.context, R.attr.rename_md_dark_theme, builder.theme == Theme.DARK);
     builder.theme = darkTheme ? Theme.DARK : Theme.LIGHT;
-    return darkTheme ? R.style.MD_Dark : R.style.MD_Light;
+    return darkTheme ? R.style.rename_MD_Dark : R.style.rename_MD_Light;
   }
 
   @LayoutRes
@@ -91,14 +91,14 @@ class DialogInit {
     if (builder.backgroundColor == 0) {
       builder.backgroundColor =
           DialogUtils.resolveColor(
-              builder.context,
-              R.attr.md_background_color,
-              DialogUtils.resolveColor(dialog.getContext(), R.attr.colorBackgroundFloating));
+                  builder.context,
+                  R.attr.rename_md_background_color,
+                  DialogUtils.resolveColor(dialog.getContext(), R.attr.colorBackgroundFloating));
     }
     if (builder.backgroundColor != 0) {
       GradientDrawable drawable = new GradientDrawable();
       drawable.setCornerRadius(
-          builder.context.getResources().getDimension(R.dimen.md_bg_corner_radius));
+              builder.context.getResources().getDimension(R.dimen.rename_md_bg_corner_radius));
       drawable.setColor(builder.backgroundColor);
       dialog.getWindow().setBackgroundDrawable(drawable);
     }
@@ -106,22 +106,22 @@ class DialogInit {
     // Retrieve color theme attributes
     if (!builder.positiveColorSet) {
       builder.positiveColor =
-          DialogUtils.resolveActionTextColorStateList(
-              builder.context, R.attr.md_positive_color, builder.positiveColor);
+              DialogUtils.resolveActionTextColorStateList(
+                      builder.context, R.attr.rename_md_positive_color, builder.positiveColor);
     }
     if (!builder.neutralColorSet) {
       builder.neutralColor =
-          DialogUtils.resolveActionTextColorStateList(
-              builder.context, R.attr.md_neutral_color, builder.neutralColor);
+              DialogUtils.resolveActionTextColorStateList(
+                      builder.context, R.attr.rename_md_neutral_color, builder.neutralColor);
     }
     if (!builder.negativeColorSet) {
       builder.negativeColor =
-          DialogUtils.resolveActionTextColorStateList(
-              builder.context, R.attr.md_negative_color, builder.negativeColor);
+              DialogUtils.resolveActionTextColorStateList(
+                      builder.context, R.attr.rename_md_negative_color, builder.negativeColor);
     }
     if (!builder.widgetColorSet) {
       builder.widgetColor =
-          DialogUtils.resolveColor(builder.context, R.attr.md_widget_color, builder.widgetColor);
+              DialogUtils.resolveColor(builder.context, R.attr.rename_md_widget_color, builder.widgetColor);
     }
 
     // Retrieve default title/content colors
@@ -129,17 +129,17 @@ class DialogInit {
       final int titleColorFallback =
           DialogUtils.resolveColor(dialog.getContext(), android.R.attr.textColorPrimary);
       builder.titleColor =
-          DialogUtils.resolveColor(builder.context, R.attr.md_title_color, titleColorFallback);
+              DialogUtils.resolveColor(builder.context, R.attr.rename_md_title_color, titleColorFallback);
     }
     if (!builder.contentColorSet) {
       final int contentColorFallback =
           DialogUtils.resolveColor(dialog.getContext(), android.R.attr.textColorSecondary);
       builder.contentColor =
-          DialogUtils.resolveColor(builder.context, R.attr.md_content_color, contentColorFallback);
+              DialogUtils.resolveColor(builder.context, R.attr.rename_md_content_color, contentColorFallback);
     }
     if (!builder.itemColorSet) {
       builder.itemColor =
-          DialogUtils.resolveColor(builder.context, R.attr.md_item_color, builder.contentColor);
+              DialogUtils.resolveColor(builder.context, R.attr.rename_md_item_color, builder.contentColor);
     }
 
     // Retrieve references to views
@@ -184,7 +184,7 @@ class DialogInit {
       dialog.icon.setVisibility(View.VISIBLE);
       dialog.icon.setImageDrawable(builder.icon);
     } else {
-      Drawable d = DialogUtils.resolveDrawable(builder.context, R.attr.md_icon);
+      Drawable d = DialogUtils.resolveDrawable(builder.context, R.attr.rename_md_icon);
       if (d != null) {
         dialog.icon.setVisibility(View.VISIBLE);
         dialog.icon.setImageDrawable(d);
@@ -196,11 +196,11 @@ class DialogInit {
     // Setup icon size limiting
     int maxIconSize = builder.maxIconSize;
     if (maxIconSize == -1) {
-      maxIconSize = DialogUtils.resolveDimension(builder.context, R.attr.md_icon_max_size);
+      maxIconSize = DialogUtils.resolveDimension(builder.context, R.attr.rename_md_icon_max_size);
     }
     if (builder.limitIconToDefaultSize
-        || DialogUtils.resolveBoolean(builder.context, R.attr.md_icon_limit_icon_to_default_size)) {
-      maxIconSize = builder.context.getResources().getDimensionPixelSize(R.dimen.md_icon_max_size);
+            || DialogUtils.resolveBoolean(builder.context, R.attr.rename_md_icon_limit_icon_to_default_size)) {
+      maxIconSize = builder.context.getResources().getDimensionPixelSize(R.dimen.rename_md_icon_max_size);
     }
     if (maxIconSize > -1) {
       dialog.icon.setAdjustViewBounds(true);
@@ -211,9 +211,9 @@ class DialogInit {
 
     // Setup divider color in case content scrolls
     if (!builder.dividerColorSet) {
-      final int dividerFallback = DialogUtils.resolveColor(dialog.getContext(), R.attr.md_divider);
+      final int dividerFallback = DialogUtils.resolveColor(dialog.getContext(), R.attr.rename_md_divider);
       builder.dividerColor =
-          DialogUtils.resolveColor(builder.context, R.attr.md_divider_color, dividerFallback);
+              DialogUtils.resolveColor(builder.context, R.attr.rename_md_divider_color, dividerFallback);
     }
     dialog.view.setDividerColor(builder.dividerColor);
 
@@ -362,10 +362,10 @@ class DialogInit {
         /* Apply the frame padding to the content, this allows the ScrollView to draw it's
         over scroll glow without clipping */
         final Resources r = dialog.getContext().getResources();
-        final int framePadding = r.getDimensionPixelSize(R.dimen.md_dialog_frame_margin);
+        final int framePadding = r.getDimensionPixelSize(R.dimen.rename_md_dialog_frame_margin);
         final ScrollView sv = new ScrollView(dialog.getContext());
-        int paddingTop = r.getDimensionPixelSize(R.dimen.md_content_padding_top);
-        int paddingBottom = r.getDimensionPixelSize(R.dimen.md_content_padding_bottom);
+        int paddingTop = r.getDimensionPixelSize(R.dimen.rename_md_content_padding_top);
+        int paddingBottom = r.getDimensionPixelSize(R.dimen.rename_md_content_padding_bottom);
         sv.setClipToPadding(false);
         if (innerView instanceof EditText) {
           // Setting padding to an EditText causes visual errors, set it to the parent instead
@@ -418,11 +418,11 @@ class DialogInit {
     final int windowHeight = size.y;
 
     final int windowVerticalPadding =
-        builder.context.getResources().getDimensionPixelSize(R.dimen.md_dialog_vertical_margin);
+            builder.context.getResources().getDimensionPixelSize(R.dimen.rename_md_dialog_vertical_margin);
     final int windowHorizontalPadding =
-        builder.context.getResources().getDimensionPixelSize(R.dimen.md_dialog_horizontal_margin);
+            builder.context.getResources().getDimensionPixelSize(R.dimen.rename_md_dialog_horizontal_margin);
     final int maxWidth =
-        builder.context.getResources().getDimensionPixelSize(R.dimen.md_dialog_max_width);
+            builder.context.getResources().getDimensionPixelSize(R.dimen.rename_md_dialog_max_width);
     final int calculatedWidth = windowWidth - (windowHorizontalPadding * 2);
 
     dialog.view.setMaxHeight(windowHeight - windowVerticalPadding * 2);

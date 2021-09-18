@@ -45,20 +45,6 @@ class DialogBase extends Dialog implements DialogInterface.OnShowListener {
 
     final void setViewInternal(View view) {
         super.setContentView(view);
-        Window window = getWindow();
-        if (window != null) {
-            view.setBackgroundColor(getContext().getResources().getColor(R.color.white));
-            view.setOutlineProvider(new ViewOutlineProvider() {
-                @Override
-                public void getOutline(View view, Outline outline) {
-                    outline.setRoundRect(0, 0, view.getWidth(), view.getHeight(),
-                            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getContext().getResources().getDisplayMetrics()));
-                }
-            });
-            view.setClipToOutline(true);
-
-            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        }
     }
 
     @Override
